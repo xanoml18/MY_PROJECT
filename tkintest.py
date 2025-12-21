@@ -1,13 +1,12 @@
 from tkinter import *
+from PIL import Image, ImageTk   # ini tambahan
 
 root = Tk()
 root.geometry('500x250')
-root.iconbitmap('woi.ico')
 
-
-
-
-
-
+# Baris baru ini yang ganti icon
+img = Image.open('woi.ico')
+photo = ImageTk.PhotoImage(img)
+root.iconphoto(True, photo)
 
 root.mainloop()
